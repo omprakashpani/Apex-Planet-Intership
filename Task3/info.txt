@@ -1,0 +1,4 @@
+This project includes:
+🔹 A dynamic quiz question generator that fetches questions from the OpenTDB API
+🔹 An auto-running image carousel powered by the Picsum API
+🔹 Responsive and clean UI/UX design for a minimal yet interactive experience
