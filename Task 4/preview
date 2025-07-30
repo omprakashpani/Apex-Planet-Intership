@@ -1,0 +1,25 @@
+🌐 FusionDesk – Web Development Internship Project (Apex Planet)
+FusionDesk is a bundled web project developed during my internship at Apex Planet to showcase practical frontend development skills using HTML, CSS, JavaScript, and Bootstrap.
+
+💡 Includes 3 Projects:
+
+Personal Portfolio – A sleek, responsive portfolio site highlighting skills, projects, and contact links.
+
+To-Do List App – A localStorage-based task manager with add/delete/complete functionality.
+
+Product Filter Page – A dynamic product catalog with real-time filtering and sorting.
+
+🛠️ Tech Stack:
+HTML, CSS, Bootstrap 4, JavaScript, DOM Manipulation, Responsive Design
+
+📁 Project Structure:
+
+index.html: Main hub with navigation
+
+port.html: Portfolio page
+
+to-do.html: Task manager
+
+pro.html: Product filter page
+
+Separate CSS files per module
