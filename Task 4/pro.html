@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Product Filter</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="pro.css">
+</head>
+<body>
+  <div class="container">
+    <h2 class="text-center my-4">Product Page</h2>
+
+    <div class="row filters">
+      <div class="col-md-6">
+        <label>Filter by Category:</label>
+        <select id="categoryFilter" class="form-control" onchange="renderProducts()">
+          <option value="all">All</option>
+          <option value="electronics">Electronics</option>
+          <option value="fashion">Fashion</option>
+          <option value="books">Books</option>
+        </select>
+      </div>
+      <div class="col-md-6">
+        <label>Sort by:</label>
+        <select id="sortOption" class="form-control" onchange="renderProducts()">
+          <option value="default">Default</option>
+          <option value="priceAsc">Price: Low to High</option>
+          <option value="priceDesc">Price: High to Low</option>
+          <option value="rating">Rating: High to Low</option>
+        </select>
+      </div>
+    </div>
+
+    <div id="productList" class="row"></div>
+  </div>
+
+  <script>
+    const products = [
+      { name: "Smartphone", category: "electronics", price: 299, rating: 4.5 },
+      { name: "Jeans", category: "fashion", price: 49, rating: 4.2 },
+      { name: "Laptop", category: "electronics", price: 999, rating: 4.8 },
+      { name: "T-Shirt", category: "fashion", price: 19, rating: 4.0 },
+      { name: "Novel", category: "books", price: 15, rating: 4.6 },
+      { name: "Headphones", category: "electronics", price: 89, rating: 4.3 }
+    ];
+
+    function renderProducts() {
+      const category = document.getElementById("categoryFilter").value;
+      const sort = document.getElementById("sortOption").value;
+
+      let filtered = products.filter(p => category === "all" || p.category === category);
+
+      if (sort === "priceAsc") filtered.sort((a, b) => a.price - b.price);
+      else if (sort === "priceDesc") filtered.sort((a, b) => b.price - a.price);
+      else if (sort === "rating") filtered.sort((a, b) => b.rating - a.rating);
+
+      const productList = document.getElementById("productList");
+      productList.innerHTML = "";
+
+      filtered.forEach(product => {
+        productList.innerHTML += `
+          <div class="col-md-4">
+            <div class="product-card">
+              <h5>${product.name}</h5>
+              <p>Category: ${product.category}</p>
+              <p>Price: $${product.price}</p>
+              <p>Rating: ⭐ ${product.rating}</p>
+            </div>
+          </div>
+        `;
+      });
+    }
+    renderProducts();
+  </script>
+</body>
+</html>

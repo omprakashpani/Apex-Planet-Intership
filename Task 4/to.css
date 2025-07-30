@@ -1,0 +1,17 @@
+body {
+      background-color: #f0f8ff;
+      padding: 20px;
+    }
+    .task-list li {
+      margin: 10px 0;
+      padding: 10px;
+      background-color: white;
+      border-radius: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .task-list li.completed {
+      text-decoration: line-through;
+      color: gray;
+    }

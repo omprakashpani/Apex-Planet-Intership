@@ -1,0 +1,10 @@
+.product-card {
+      border: 1px #475569;
+      border-radius: 10px;
+      padding: 15px;
+      margin: 10px 0;
+      background-color: #f0f8ff;
+    }
+    .filters {
+      margin-bottom: 20px;
+    }
