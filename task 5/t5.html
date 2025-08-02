@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MiniShop</title>
+  <link rel="stylesheet" href="t5.css" />
+</head>
+<body>
+
+  <header>
+    <div class="logo">MiniShop</div>
+    <nav>
+      <ul id="navbar">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#products" class="nav-link">Products</a></li>
+        <li><a href="#cart" class="nav-link">Cart (<span id="cart-count">0</span>)</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="section">
+      <h1>Welcome to MiniShop</h1>
+      <p>Your one-stop shop for amazing products.</p>
+
+      <section id="highlighted" class="section">
+        <h2>Most Sold & Recommended</h2>
+        <div class="carousel-container">
+          <div class="carousel" id="carousel">
+            <div class="carousel-item">
+              <img src="x box c.jpg" alt="controller" />
+              <p>Xbox Controller ₹7,549</p>
+            </div>
+            <div class="carousel-item">
+              <img src="ps5.jpg" alt="console" />
+              <p>PS5 - ₹56,999</p>
+            </div>
+            <div class="carousel-item">
+              <img src="s25.jpg" alt="phone" />
+              <p>Samsung S25 - ₹1,10,599</p>
+            </div>
+          </div>
+          <button class="carousel-btn left" onclick="prevSlide()">&#10094;</button>
+          <button class="carousel-btn right" onclick="nextSlide()">&#10095;</button>
+        </div>
+      </section>
+    </section>
+
+    <section id="products" class="section">
+      <h2>Our Products</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="ip.jpg" alt="Iphone 15" />
+          <h3>Iphone 15 Pro</h3>
+          <p>₹110999</p>
+          <button onclick="addToCart('Iphone 15 Pro', 110999)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="airpod.jpg" alt="Earbuds" />
+          <h3>Earbuds</h3>
+          <p>₹20999</p>
+          <button onclick="addToCart('Earbuds', 20999)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="a head.jpg" alt="AirPod" />
+          <h3>Apple AirPod</h3>
+          <p>₹35999</p>
+          <button onclick="addToCart('Apple AirPod', 35999)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="xbox.jpg" alt="Xbox" />
+          <h3>X box</h3>
+          <p>₹45999</p>
+          <button onclick="addToCart('X box', 45999)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="s25.jpg" alt="Samsung S25" />
+          <h3>Samsung S25</h3>
+          <p>₹110599</p>
+          <button onclick="addToCart('Samsung S25', 110599)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="ps5.jpg" alt="PS5" />
+          <h3>PS5</h3>
+          <p>₹56999</p>
+          <button onclick="addToCart('PS5', 56999)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="x box c.jpg" alt="Controller" />
+          <h3>X-box Controller</h3>
+          <p>₹7549</p>
+          <button onclick="addToCart('X-box Controller', 7549)">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="cart" class="section">
+      <h2>Your Cart</h2>
+      <ul id="cart-list"></ul>
+      <p>Items in cart: <span id="cart-items">0</span></p>
+      <p>Total: ₹<span id="cart-total">0</span></p>
+    </section>
+  </main>
+
+  <script src="t5.js"></script>
+</body>
+</html>
